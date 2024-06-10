@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obracunski list gradjevinske knjige</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('./factory-building.jpg') no-repeat center center fixed;
+      background-size: cover;
+      flex-direction: column;
+    }
+    h2 {
+      color: white;
+      text-shadow: 2px 2px 4px #000000;
+      text-align: center;
+    }
+    table {
+      width: 500px;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    input[type="submit"] {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+    }
+    input[type="submit"]:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <h2>Obracunski list gradjevinske knjige</h2>
+  <form id="unosForm">
+    <table>
+      <tr>
+        <th colspan="2">Unos za jedan dan</th>
+      </tr>
+      <tr>
+        <td>Datum:</td>
+        <td><input type="date" id="datum" name="datum" required></td>
+      </tr>
+      <tr>
+        <td>Ime i prezime radnika:</td>
+        <td><input type="text" id="imePrezime" name="imePrezime" required></td>
+      </tr>
+      <tr>
+        <td>Opis rada:</td>
+        <td><textarea id="opisRada" name="opisRada" required></textarea></td>
+      </tr>
+      <tr>
+        <td>Šifra:</td>
+        <td><input type="text" id="sifra" name="sifra" required></td>
+      </tr>
+      <tr>
+        <td>Broj modela:</td>
+        <td><input type="number" id="brojModela" name="brojModela" required></td>
+      </tr>
+      <tr>
+        <td>Količina:</td>
+        <td><input type="number" id="kolicina" name="kolicina" required></td>
+      </tr>
+      <tr>
+        <td>Potpis izvođača:</td>
+        <td><input type="text" id="potpisIzvodjaca" name="potpisIzvodjaca" required></td>
+      </tr>
+      <tr>
+        <td>Potpis nadzornog organa:</td>
+        <td><input type="text" id="potpisNadzornogOrgana" name="potpisNadzornogOrgana" required></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="submit" value="Potvrdi unos"></td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    document.getElementById('unosForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      const data = {};
+      formData.forEach((value, key) => data[key] = value);
+      
+      const response = await fetch('/unos-podataka', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      
+      if (response.ok) {
+        alert('Podaci su uspešno sačuvani!');
+        window.location.href = '/izvestaj';
+      } else {
+        alert('Došlo je do greške prilikom čuvanja podataka.');
+      }
+    });
+  </script>
+</body>
+</html>

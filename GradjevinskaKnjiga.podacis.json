@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "665a40279814a8bd600af54e"
+  },
+  "datum": {
+    "$date": "2024-05-01T00:00:00.000Z"
+  },
+  "imePrezime": "Jelena Dencic",
+  "opisRada": "Popravka",
+  "sifra": "1",
+  "brojModela": 12,
+  "kolicina": 4,
+  "potpisIzvodjaca": "Jelena D",
+  "potpisNadzornogOrgana": "Jelena",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b1597c4e0c7dc8d8f6105"
+  },
+  "datum": {
+    "$date": "2024-06-01T00:00:00.000Z"
+  },
+  "imePrezime": "Petar Petrovic",
+  "opisRada": "Montaza",
+  "sifra": "7",
+  "brojModela": 25,
+  "kolicina": 1,
+  "potpisIzvodjaca": "Marta",
+  "potpisNadzornogOrgana": "Marta Ignjatovic",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b1660c4e0c7dc8d8f610a"
+  },
+  "datum": {
+    "$date": "2024-05-29T00:00:00.000Z"
+  },
+  "imePrezime": "Milan Milanovic",
+  "opisRada": "Popravka masine",
+  "sifra": "9",
+  "brojModela": 18,
+  "kolicina": 2,
+  "potpisIzvodjaca": "Marta",
+  "potpisNadzornogOrgana": "Marta Ignjatovic",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b1690c4e0c7dc8d8f610d"
+  },
+  "datum": {
+    "$date": "2024-05-29T00:00:00.000Z"
+  },
+  "imePrezime": "Igor Petrovic",
+  "opisRada": "Odrzavanje",
+  "sifra": "16",
+  "brojModela": 28,
+  "kolicina": 1,
+  "potpisIzvodjaca": "Jelena",
+  "potpisNadzornogOrgana": "Jelena Dencic",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b16d3c4e0c7dc8d8f6110"
+  },
+  "datum": {
+    "$date": "2024-05-21T00:00:00.000Z"
+  },
+  "imePrezime": "Lazar Ivanovic",
+  "opisRada": "Pripremni radovi",
+  "sifra": "4",
+  "brojModela": 13,
+  "kolicina": 5,
+  "potpisIzvodjaca": "Jelena",
+  "potpisNadzornogOrgana": "Jelena Dencic",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b1715c4e0c7dc8d8f6113"
+  },
+  "datum": {
+    "$date": "2024-05-21T00:00:00.000Z"
+  },
+  "imePrezime": "Nevena Marinkovic",
+  "opisRada": "Instalacija",
+  "sifra": "10",
+  "brojModela": 33,
+  "kolicina": 1,
+  "potpisIzvodjaca": "Marta",
+  "potpisNadzornogOrgana": "Marta Ignjatovic",
+  "__v": 0
+}]
