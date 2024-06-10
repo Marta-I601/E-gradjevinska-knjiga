@@ -1,2 +1,4 @@
 # E-gradjevinska-knjiga
-Demo verzija
+Dobrodošli u demo verziju E-gradjevinske knjige!
+
+Ovo je demo verzija aplikacije E-gradjevinske knjige, koja Vam omogućava da jednostavno pratite sve Vaše građevinske projekte na jednom mestu.
